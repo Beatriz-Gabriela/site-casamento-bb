@@ -128,7 +128,7 @@
 
       const img = document.createElement('img');
       img.className =
-        'canva-image w-full h-28 object-cover rounded-lg mb-5';
+        'canva-image w-full h-40 object-cover rounded-lg mb-5';
       img.src = gift.image || '';
       img.alt = gift.title ? `Imagem de ${gift.title}` : '';
       img.loading = 'lazy';
