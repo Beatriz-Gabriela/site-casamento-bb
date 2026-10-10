@@ -14,5 +14,5 @@ window.WEDDING_GIFTS = [
   { title: "Dar pitaco/falar mal da festa", description: "Para quem nunca está sastifeito e precisa reclamar.", price: "R$ 350,00", button: "PRESENTEAR", url: "", image: "assets/presente-07.jpg" },
   { title: "Cooktop de última geração", description: "Para a cozinha inovadora das noivas.", price: "R$ 400,00", button: "PRESENTEAR", url: "", image: "assets/presente-08.jpg" },
   { title: "Por que eu posso", description: "Meu marido tem dois empregos.", price: "R$ 500,00", button: "PRESENTEAR", url: "", image: "assets/presente-09.jpg" },
-  { title: "O melhor presente", description: "Porque eu sou ricaaaaaa!", price: "R$ 800,00", button: "PRESENTEAR", url: "https://checkout.nubank.com.br/l36g0PpoET69zndx", image: "assets/presente-12.jpg" }
+  { title: "O melhor presente", description: "Porque eu sou ricaaaaaa!", price: "R$ 800,00", button: "PRESENTEAR", url: "https://checkout.nubank.com.br/l36g0PpoET69zndx", image: "assets/presente-10.jpg" }
 ];
