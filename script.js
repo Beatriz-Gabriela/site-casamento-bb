@@ -93,7 +93,7 @@
   }
 
   // RSVP via Formspree. Cole o endpoint do seu formulário no campo abaixo.
-  const FORMSPREE_ENDPOINT = 'COLE_AQUI_SEU_ENDPOINT_FORMSPREE';
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkjobqwa';
   const form = $('#rsvp-form');
   const status = $('#rsvp-status');
   const submit = $('#rsvp-submit');
