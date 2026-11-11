@@ -14,7 +14,7 @@ Este repositório contém a implementação estática usada no site de Bárbara 
 - Lista de presentes dinâmica, alimentada por `presentes.js`, com links externos de pagamento.
 - Galeria de fotos.
 - Endereços e links para abrir os locais no mapa.
-- Formulário de confirmação de presença integrado ao Formspree.
+- Formulário de confirmação de presença integrado ao Google Sheets por Google Apps Script.
 - Navegação por âncoras, menu mobile e animações de entrada.
 - Preferência por movimento reduzido respeitada para acessibilidade.
 
@@ -24,7 +24,7 @@ Este repositório contém a implementação estática usada no site de Bárbara 
 - [Tailwind CSS via CDN](https://tailwindcss.com/) para utilitários de layout.
 - [Lucide](https://lucide.dev/) para ícones.
 - [Google Fonts](https://fonts.google.com/) para tipografia.
-- [Formspree](https://formspree.io/) como serviço externo de recebimento do RSVP.
+- Google Sheets + Google Apps Script como serviço externo de recebimento do RSVP.
 - GitHub Pages para hospedagem estática.
 
 Como Tailwind, Lucide e as fontes são carregados por CDN, é necessária conexão com a internet para que todos os recursos externos sejam exibidos.
@@ -91,15 +91,15 @@ Edite o array `window.WEDDING_GIFTS` em `presentes.js`. Cada objeto representa u
 
 ## Configurar o RSVP
 
-O projeto é estático e não possui banco de dados próprio. Para receber as respostas:
+O projeto é estático e registra as respostas em uma planilha do Google Sheets por meio de um Web App do Google Apps Script.
 
-1. Crie um formulário no [Formspree](https://formspree.io/).
-2. Copie o endpoint fornecido.
-3. Abra `script.js` e substitua o valor de `FORMSPREE_ENDPOINT` pelo endpoint do seu formulário.
-4. Configure as notificações e destinatários diretamente no Formspree.
-5. Envie uma resposta de teste e confirme o recebimento.
+1. Abra o projeto do Google Apps Script associado à planilha de respostas.
+2. Confira as permissões de acesso e publique o script como **Aplicativo da Web**, conforme o fluxo definido para o projeto.
+3. Copie a URL de implantação terminada em `/exec`.
+4. No arquivo `script.js`, atualize a constante `GOOGLE_APPS_SCRIPT_URL` com essa URL.
+5. Faça uma confirmação de teste e verifique se os dados chegaram à planilha.
 
-Não publique chaves privadas, senhas ou tokens no repositório. Qualquer configuração colocada no JavaScript do navegador pode ser visualizada pelos visitantes; use apenas endpoints e identificadores destinados ao uso público no frontend.
+O código do frontend já envia o formulário para o endpoint configurado. A planilha, o Apps Script e suas permissões precisam permanecer ativos para o RSVP funcionar. Não publique senhas, tokens ou credenciais privadas no repositório; a URL do Web App fica visível no código do navegador e deve ser tratada como endpoint público.
 
 ## Publicar no GitHub Pages
 
