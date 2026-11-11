@@ -125,8 +125,10 @@
     .reveal.visible { opacity:1; transform:none; }
 
     /* Cores isoladas por seção: evita herança de cores do tema geral. */
-    #presentes { color:#264453; background:#f8f5ef; }
-    #presentes {padding-bottom: 10px !important;}
+    #presentes { color:#264453; background:#ffffff; }
+    #presentes { padding-top:clamp(40px,5vw,64px) !important; padding-bottom:10px !important; }
+    #dress-code { padding-bottom:clamp(40px,5vw,64px) !important; }
+    @media(max-width:767px) { #presentes { padding-top:32px !important; } #dress-code { padding-bottom:32px !important; } }
     #gift-status:empty {display: none !important;}
     #presentes .canva-text, #presentes h2, #presentes h3 { color:#264453 !important; }
     #presentes .gift-card, #presentes #gift-grid .gift-card { color:#264453 !important; background:#ffffff !important; border:1px solid #e6ded4 !important; opacity:1 !important; visibility:visible !important; display:flex !important; transform:none; min-height:240px; }
@@ -269,7 +271,7 @@
      <p id="count-complete" class="canva-text hidden mt-7" aria-live="polite">Chegou o grande dia! Estamos muito felizes por celebrar com você.</p>
     </div>
    </section>
-   <section id="roteiro" class="route-section w-full"><img class="canva-image route-replacement" loading="lazy" src="assets/roteiro-programacao.png" alt="">
+   <section id="roteiro" class="route-section w-full"><img class="canva-image route-replacement" loading="lazy" src="assets/roteiro-programacao.png" alt=""></section>
    <section id="dress-code" class="canva-section section-space w-full" style="background:#efeae2">
     <div class="shell">
      <div class="dress-intro reveal">
@@ -330,7 +332,8 @@
      </div>
     </div>
    </section>
-   <section id="presentes" class="shell section-space">
+   <section id="presentes" class="section-space w-full">
+    <div class="shell">
     <div class="max-w-2xl mb-11 reveal">
      <p class="canva-text eyebrow mb-4">Um carinho para a nossa nova fase</p>
      <h2 class="canva-text dress-code-type font-bold text-3xl mt-3">Lista de presentes</h2>
@@ -340,6 +343,7 @@
     </div>
     <div id="gift-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" aria-live="polite"></div>
     <p id="gift-status" class="canva-text mt-6" role="status"></p>
+    </div>
    </section>
 
    <section id="galeria" class="shell section-space">
